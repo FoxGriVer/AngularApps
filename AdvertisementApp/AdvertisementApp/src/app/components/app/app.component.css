@@ -1,0 +1,8 @@
+.card-header {
+	background-color: darkorchid;
+	text-align: center;
+}
+
+.card-header a {
+	color: white;
+}

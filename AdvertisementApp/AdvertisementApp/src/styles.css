@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.card-header {
+	background-color: darkorchid;
+	text-align: center;
+}
+
+.card-header a {
+	color: white;
+}
+
+.badge-primary {
+	color: #fff;
+	background-color: #963fc7;
+}
+
+.btn-outline-secondary:hover {
+    color: white;
+    background-color: darkorchid;
+    border-color: darkorchid;
+}
+
+.card-title {
+    color: white;
+}

@@ -1,0 +1,12 @@
+#advertisement-header {
+    margin-top: 5%;
+}
+
+.descriptionOfTheCard {
+    margin-bottom: 1%;
+}
+
+.card:hover {
+	background-color: darkviolet;
+	color: antiquewhite;
+}

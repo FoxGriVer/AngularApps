@@ -1,0 +1,39 @@
+<div>
+    <div class="offset-4">
+        <h1>Создание новой записи</h1>
+        <div class="col-4 offset-1">
+            <div class="form-group">
+                <label>Название записи</label>
+                <input type="text" [(ngModel)]="record.nameOfObject" class="form-control" #nameOfObject="ngModel" required/>
+                <div [hidden]="nameOfObject.valid || nameOfObject.untouched" class="alert alert-danger">
+                    Не указано название
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Сумма</label>
+                <input type="number" [(ngModel)]="record.ammount" class="form-control" #ammount="ngModel" required />
+                <div [hidden]="ammount.valid || ammount.untouched" class="alert alert-danger">
+                    Не указана сумма
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Дата</label>
+                <input type="datetime" [(ngModel)]="record.date" class="form-control" placeholder="месяц/день/год" #date="ngModel" required />
+                <div [hidden]="date.valid || date.untouched" class="alert alert-danger">
+                    Не указана дата
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Операция поступления</label>
+                <input type="checkbox" [(ngModel)]="record.isIncome" class="form-control" #isIncome="ngModel" required/>
+                <div [hidden]="isIncome.valid || isIncome.untouched" class="alert alert-danger">
+                    Не указано значение
+                </div>
+            </div>
+            <div class="row">
+                <input type="button"  [disabled]="nameOfObject.invalid || ammount.invalid || date.invalid" value="Сохранить" (click)="save()"  class="btn btn-success" />
+                <input type="button" routerLink="../" value="Отмена"  class="btn btn-warning offset-1" />
+            </div>
+        </div>
+    </div>
+</div>
